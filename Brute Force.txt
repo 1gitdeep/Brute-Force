@@ -1,0 +1,19 @@
+Text = input(&quot;Enter the Text:\n&quot;)
+Pattern = input(&quot;Enter The Pattern:&quot;)
+Text_Length = len(Text)
+Pattern_Length = len(Pattern)
+if Pattern_Length &gt; Text_Length:
+print(&quot;No Match Found&quot;)
+else:
+Found = False
+for i in range(0,Text_Length):
+j = 0
+while (j &lt; Pattern_Length and Text[i] == Pattern[j] ):
+i=i+1
+j=j+1
+if j == Pattern_Length:
+Found = True
+print(&quot;Matching Found At &quot; + str(i-Pattern_Length+1))
+
+if not Found:
+print(&quot;No Matching Found&quot;)
